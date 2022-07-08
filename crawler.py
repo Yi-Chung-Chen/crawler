@@ -15,7 +15,7 @@ num_movie = len(links)
 def get_movies_info():
 
         for imdbid in links['imdbId']:
-            if imdbid<100000: #處理imdbid長度問題小於100000的話，需要補零才會讓網址正確。
+            if imdbid<100000: #處理imdbid長度問題，如果imdbid<100000的話，需要補零才會讓網址正確。
                 url = 'https://www.imdb.com/title/tt00'+str(imdbid)+'/'
             else:
                 url = 'https://www.imdb.com/title/tt0'+str(imdbid)+'/'
