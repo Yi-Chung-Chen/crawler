@@ -8,9 +8,9 @@ movie_ratings = []
 movie_years = []
 movie_content = []
 movie_img_url = []
-num_movie = 40
 
 links = pd.read_csv('Mylinks.csv')
+num_movie = len(links)
 
 def get_movies_info():
 
@@ -47,7 +47,7 @@ def get_movies_info():
             movie_ratings.append(ratings.string)
             movie_years.append(years.string)
             movie_content.append(content.string)
-            
+
 def movie_writer():
     file = open('movie_info.csv',mode='w', newline='')
     writer = csv.writer(file)
